@@ -1,0 +1,28 @@
+<div class="month">
+  <div class="month_name">
+    {{ monthName | uppercase }}
+  </div>
+  <div class="week">
+    <div class="week_day" *ngFor="let day of weekDays">
+      <p class="gradient_text">{{ day }}</p>
+    </div>
+  </div>
+  <div class="days" *ngFor="let week of days">
+    <div
+      class="day"
+      [ngClass]="day + '/' + month === today ? 'gradient-border' : ''"
+      *ngFor="let day of week"
+      (click)="dayPopupOpen = true"
+    >
+      <p>
+        {{ day > 0 && day <= monthLength ? (day | number : "2.0") : "" }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- popups -->
+<app-day-popup
+  *ngIf="dayPopupOpen"
+  (onPopupClose)="dayPopupOpen = false"
+></app-day-popup>

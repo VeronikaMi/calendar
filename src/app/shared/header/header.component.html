@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="left_side">
+    <div class="logo">
+      <p class="year">{{ year }}</p>
+      <p class="calendar satisfy gradient_text">calendar</p>
+    </div>
+    <nav>
+      <ul>
+        <li
+          *ngFor="let link of navigation"
+          [routerLink]="link.route"
+          routerLinkActive="gradient_text"
+        >
+          <a>{{ link.name }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="right_side">
+    <div class="profile" *ngIf="user">
+      <div class="profile_name">
+        Hello,
+        <span class="bold">
+          {{ user.name }}
+        </span>
+      </div>
+      <div class="profile_pic"></div>
+    </div>
+    <!-- <button id="SIGN IN">Sign In</button> -->
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>

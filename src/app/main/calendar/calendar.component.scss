@@ -1,0 +1,13 @@
+@import "../../../colors.scss";
+
+.calendar {
+  display: grid;
+  justify-content: center;
+  #filter {
+    display: block;
+    text-transform: capitalize;
+    color: $main-text-light;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+}

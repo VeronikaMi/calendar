@@ -1,0 +1,13 @@
+@import "../../../colors.scss";
+
+footer {
+  background-color: $brown-primary;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  .copyright {
+    text-align: center;
+    color: $footer-white;
+    margin: 0;
+  }
+}
